@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">In.Search Browser</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_net_settings">Network Settings</string>
+
+    <string name="title_activity_network_settings">NetworkSettings</string>
+    <string name="net_sett_ctg_basic">Basic Settings</string>
+    <string name="net_sett_ctg_basic_h">Basic Settings</string> <!-- unused now (only headers) -->
+    <string name="net_sett_ctg_basic_key">basic_settings_ctg</string>
+
+    <string name="net_sett_net_type_key">network_type</string>
+    <string name="net_sett_open_last_page_key">open_last_page</string>
+    <string name="net_sett_home_page_key">home_page</string>
+    <string name="net_sett_last_page_key">last_page</string>
+
+    <string name="net_sett_open_last_page_title">Open last page</string>
+    <string name="net_sett_open_last_page_sum">Open last page at start</string>
+    <string name="net_sett_home_page_title">Home page</string>
+    <string name="def_home_page">https://android.com</string>
+    <string name="net_sett_net_type_title">Network Type</string>
+    <string-array name="net_sett_net_type_el_titles">
+        <item>Only Wi-Fi</item>
+        <item>Any network</item>
+    </string-array>
+    <string-array name="net_sett_net_type_el_vals">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string name="net_sett_header_intent_t">Open App</string>
+    <string name="net_sett_header_intent_s">Intent to open app [test]</string>
+
+    <string name="tv_top_text">Intellectual (morphological) search test app</string>
+    <string name="btn_load_text">Load</string>
+    <string name="btn_nav_back_text"><![CDATA[<]]></string>
+
+    <string name="btn_prev_text"> <![CDATA[<]]> </string>
+    <string name="btn_search_text"> <![CDATA[Search]]> </string>
+    <string name="btn_search_next_text"> <![CDATA[Search >]]> </string>
+    <string name="et_search_text"> </string>
+
+    <string name="js_func_call_hl_srch_code_sample">
+        <![CDATA[ javascript:(function () { return highlightSearchTerms(\' the \', true, true,
+        \"<font style=\'color:#0000FF; background-color:#ffff00;\'>\", \"</font>\"); })() ]]></string>
+    <string name="js_hl_srch_beg">
+        <![CDATA[ javascript:(function () { return highlightSearchTerms( ]]></string>
+    <string name="js_hl_srch_end">
+        <![CDATA[ ); })() ]]></string>
+    <string name="js_hl_srch_arg_font_1_beg">
+        <![CDATA[ \"<font style=\'color:]]></string>
+    <string name="js_hl_srch_arg_font_1_mid">
+        <![CDATA[; background-color:]]></string>
+    <string name="js_hl_srch_arg_font_1_end">
+        <![CDATA[;\'>\" ]]></string>
+    <string name="js_hl_srch_arg_font_2">
+        <![CDATA[ \"</font>\" ]]></string>
+
+</resources>

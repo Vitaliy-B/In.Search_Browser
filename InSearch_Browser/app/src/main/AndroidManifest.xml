@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bv.dev.insearch_browser">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/in_s_wg_h_freestyle_script"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <!-- for intents without MIME (for ex., simple link) -->
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <!-- to get links from webpages -->
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- for implicit intents -->
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <!-- for intents with both url and MIME -->
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="text/html" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <!-- to get links from webpages -->
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- for implicit intents -->
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.NetworkSettingsActivity"
+            android:label="@string/title_activity_network_settings">
+            <intent-filter>
+
+                <!-- to open from Settings/DataUsage/wifi-or-some/app/preferences -->
+                <action android:name="android.intent.action.MANAGE_NETWORK_USAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- for implicit intents -->
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

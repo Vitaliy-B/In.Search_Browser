@@ -1,0 +1,11 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header android:title="@string/net_sett_header_intent_t"
+        android:summary="@string/net_sett_header_intent_s"
+        android:icon="@android:drawable/ic_menu_preferences">
+        <!-- both package and class are required! -->
+        <intent android:targetClass="bv.dev.insearch_browser.MainActivity"
+            android:targetPackage="bv.dev.insearch_browser"/>
+    </header>
+    <header android:fragment="bv.dev.insearch_browser.ui.NetworkSettingsActivity$BasicPreferenceFragment"
+        android:title="@string/net_sett_ctg_basic_h" />
+</preference-headers>

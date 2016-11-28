@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".ui.MainActivity"
+    android:id="@+id/layout_root">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_top">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_top_text"
+            android:id="@+id/tv_top"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_nav_back_text"
+            android:id="@+id/btn_nav_back"
+            android:onClick="btnNavBackClick"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"
+            android:minWidth="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_top"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_load_text"
+            android:id="@+id/btn_load"
+            android:onClick="btnLoadClick"
+            android:layout_below="@id/tv_top"
+            android:minWidth="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_url"
+            android:layout_below="@id/tv_top"
+            android:layout_toLeftOf="@+id/btn_load"
+            android:layout_toStartOf="@+id/btn_load"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="false"
+            android:maxLines="1"
+            android:inputType="textUri"
+            android:layout_toRightOf="@+id/btn_nav_back"
+            android:layout_toEndOf="@+id/btn_nav_back"
+            />
+    </RelativeLayout>
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/web_view"
+        android:layout_below="@+id/rl_top"
+        android:layout_above="@+id/rl_bottom" >
+
+        <requestFocus />
+    </WebView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/rl_bottom">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_prev_text"
+            android:id="@+id/btn_prev"
+            android:layout_alignParentLeft="true"
+            android:minWidth="40dp"
+            android:layout_alignParentStart="true"
+            android:enabled="false"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_search"
+            android:text="@string/et_search_text"
+            android:layout_toRightOf="@+id/btn_prev"
+            android:layout_toEndOf="@+id/btn_prev"
+            android:layout_toLeftOf="@+id/btn_search"
+            android:layout_toStartOf="@+id/btn_search"
+            android:maxLines="1"
+            android:inputType="textNoSuggestions"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_search_text"
+            android:id="@+id/btn_search"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="btnSearchClick" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
